@@ -1,0 +1,185 @@
+{
+  "id": "00f35156-2d85-4973-ae5b-d15a12d867f1",
+  "version": "2.0",
+  "name": "PoleEmploi",
+  "url": "https://candidat.pole-emploi.fr",
+  "tests": [{
+    "id": "b2f47503-df02-4bb5-b139-aaf16887b579",
+    "name": "Send doc to poleEmploi",
+    "commands": [{
+      "id": "eb2e3f00-723f-47e0-9c91-13ce3d1ffc38",
+      "comment": "",
+      "command": "open",
+      "target": "/candidat/situationadministrative/uploaddocuments/tableaudebord",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6efa2ce1-c5e9-41fd-bac8-17588f8e61ee",
+      "comment": "",
+      "command": "store",
+      "target": "2019-12",
+      "targets": [],
+      "value": "period"
+    }, {
+      "id": "4bff02d4-5e99-4c08-a8f0-84249115bb32",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "2064x1137",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "29022766-ce0f-4296-b18b-8db2873ad287",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-primary:nth-child(3)",
+      "targets": [
+        ["css=.btn-primary:nth-child(3)", "css:finder"],
+        ["xpath=//a[contains(text(),'Envoyer un document')]", "xpath:link"],
+        ["xpath=//a[@onclick=\"return xt_click(this,'C','52','Envoyer_document::Liste_documents_envoyes::Envoyer_doc','A');\"]", "xpath:attributes"],
+        ["xpath=//main[@id='contents']/div/div/div/div/section/div[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/candidat/situationadministrative/uploaddocuments/tableaudebord:envoyerdocument')]", "xpath:href"],
+        ["xpath=//section/div[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cd8d8322-04e1-427c-917c-1c8e0ea6b833",
+      "comment": "",
+      "command": "click",
+      "target": "id=listeDeroulanteContexte",
+      "targets": [
+        ["id=listeDeroulanteContexte", "id"],
+        ["name=listeDeroulanteContexte", "name"],
+        ["css=#listeDeroulanteContexte", "css:finder"],
+        ["xpath=//select[@id='listeDeroulanteContexte']", "xpath:attributes"],
+        ["xpath=//form[@id='formulaire']/div[3]/div[2]/fieldset/div/div[2]/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cfb1a721-1ae8-496f-a4b7-c72e4e1969aa",
+      "comment": "",
+      "command": "select",
+      "target": "id=listeDeroulanteContexte",
+      "targets": [],
+      "value": "label=Actualisation - Changement de situation"
+    }, {
+      "id": "dcb2092c-1e2e-4662-860e-510bb5df2529",
+      "comment": "",
+      "command": "click",
+      "target": "id=listeDeroulanteSituation",
+      "targets": [
+        ["id=listeDeroulanteSituation", "id"],
+        ["name=listeDeroulanteSituation", "name"],
+        ["css=#listeDeroulanteSituation", "css:finder"],
+        ["xpath=//select[@id='listeDeroulanteSituation']", "xpath:attributes"],
+        ["xpath=//form[@id='formulaire']/div[3]/div[2]/fieldset/div[2]/div[2]/select", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a4ee7e71-335f-4a13-95d5-0e36c934626e",
+      "comment": "",
+      "command": "select",
+      "target": "id=listeDeroulanteSituation",
+      "targets": [],
+      "value": "label=Activité salariée"
+    }, {
+      "id": "4a46f453-42b6-4dc3-9d25-4623ad7df1d3",
+      "comment": "",
+      "command": "click",
+      "target": "id=listeDeroulanteTypeDocument",
+      "targets": [
+        ["id=listeDeroulanteTypeDocument", "id"],
+        ["name=listeDeroulanteTypeDocument", "name"],
+        ["css=#listeDeroulanteTypeDocument", "css:finder"],
+        ["xpath=//select[@id='listeDeroulanteTypeDocument']", "xpath:attributes"],
+        ["xpath=//form[@id='formulaire']/div[3]/div[2]/fieldset/div[3]/div[2]/select", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e10891f9-b70b-4c05-a983-b326ca350e9d",
+      "comment": "",
+      "command": "select",
+      "target": "id=listeDeroulanteTypeDocument",
+      "targets": [],
+      "value": "label=Bulletin de salaire"
+    }, {
+      "id": "604d7b59-88de-4d62-9dda-f60f3283f8cc",
+      "comment": "",
+      "command": "type",
+      "target": "id=nomDocument",
+      "targets": [
+        ["id=nomDocument", "id"],
+        ["name=nomDocument", "name"],
+        ["css=#nomDocument", "css:finder"],
+        ["xpath=//input[@id='nomDocument']", "xpath:attributes"],
+        ["xpath=//form[@id='formulaire']/div[3]/div[2]/fieldset/div[4]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "Bulletin Sopra steria ${period}"
+    }, {
+      "id": "19356f57-d61e-43a8-9aa4-8196eb91b835",
+      "comment": "",
+      "command": "click",
+      "target": "id=valider",
+      "targets": [
+        ["id=valider", "id"],
+        ["css=#valider", "css:finder"],
+        ["xpath=//button[@id='valider']", "xpath:attributes"],
+        ["xpath=//div[@id='blocSubmit']/ul/li[2]/span/button", "xpath:idRelative"],
+        ["xpath=//span/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "34ac49ba-6f86-466b-95ee-5d19ccd39dad",
+      "comment": "",
+      "command": "type",
+      "target": "id=filePourMultiple",
+      "targets": [
+        ["id=filePourMultiple", "id"],
+        ["name=filePourMultiple", "name"],
+        ["css=#filePourMultiple", "css:finder"],
+        ["xpath=//input[@id='filePourMultiple']", "xpath:attributes"],
+        ["xpath=//form[@id='Formulaire']/div[2]/div[2]/fieldset/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "D:\\documents\\tordi\\digiposte_12-05-2019-154550\\Sopra steria Salaire du ${period} .pdf"
+    }, {
+      "id": "42f379be-5d98-4848-b88c-0c267b5717bb",
+      "comment": "",
+      "command": "click",
+      "target": "id=valider",
+      "targets": [
+        ["css=.nom-doc", "css:finder"],
+        ["xpath=//div[@id='multi-upload']/p/span", "xpath:idRelative"],
+        ["xpath=//p/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Première page ou fichier complet :  Sopra steria Salaire du 2018-09 .pdf')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f4dd490c-5011-4e83-8123-84ffd0272c59",
+      "comment": "",
+      "command": "click",
+      "target": "id=boutonConfirmer",
+      "targets": [
+        ["id=boutonConfirmer", "id"],
+        ["css=#boutonConfirmer", "css:finder"],
+        ["xpath=//button[@id='boutonConfirmer']", "xpath:attributes"],
+        ["xpath=//form[@id='formulaire']/div[5]/ul/li[2]/span/button", "xpath:idRelative"],
+        ["xpath=//li[2]/span/button", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "199f1db7-197a-4257-a3ef-94b3d04cdf94",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["b2f47503-df02-4bb5-b139-aaf16887b579"]
+  }],
+  "urls": ["https://candidat.pole-emploi.fr/"],
+  "plugins": []
+}
